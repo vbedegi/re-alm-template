@@ -1,4 +1,4 @@
-(defproject re-alm/lein-template "0.1.1"
+(defproject re-alm/lein-template "0.1.2"
   :description "re-alm project template for Leiningen"
   :url "https://github.com/vbedegi/re-alm-template"
   :license {:name "Eclipse Public License"

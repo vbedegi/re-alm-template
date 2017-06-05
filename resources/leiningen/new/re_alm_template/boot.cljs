@@ -1,7 +1,7 @@
-(ns {{name}} .boot
+(ns {{name}}.boot
   (:require
     [re-alm.boot :as boot]
-    [{{name}} .core :as core]))
+    [{{name}}.core :as core]))
 
 (enable-console-print!)
 
