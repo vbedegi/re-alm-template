@@ -11,11 +11,11 @@
                   :sanitized (name-to-path name)}]
            (main/info "Generating fresh 'lein new' re-alm project.")
            (->files data
-                    ["dev/user.clj" (render "user.clj" data)]
-                    ["resources/public/index.html" (render "index.html" data)]
-                    ["resources/public/css/style.css" (render "style.css" data)]
-                    ["src/{{sanitized}}/boot.cljs" (render "boot.cljs" data)]
-                    ["src/{{sanitized}}/core.cljs" (render "core.cljs" data)]
+                    ["dev/user.clj" (render "dev/user.clj" data)]
+                    ["resources/public/index.html" (render "resources/public/index.html" data)]
+                    ["resources/public/css/style.css" (render "resources/public/css/style.css" data)]
+                    ["src/cljs/{{sanitized}}/boot.cljs" (render "src/cljs/app/boot.cljs" data)]
+                    ["src/cljs/{{sanitized}}/core.cljs" (render "src/cljs/app/core.cljs" data)]
                     [".gitignore" (render ".gitignore" data)]
                     ["project.clj" (render "project.clj" data)]
                     ["README.md" (render "README.md" data)])))

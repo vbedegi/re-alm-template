@@ -20,7 +20,7 @@
 
   :cljsbuild {:builds
               [{:id "dev"
-                :source-paths ["src"]
+                :source-paths ["src/cljs"]
 
                 ;; the presence of a :figwheel configuration here
                 ;; will cause figwheel to inject the figwheel client
@@ -44,7 +44,7 @@
                ;; production. You can build this with:
                ;; lein cljsbuild once min
                {:id "min"
-                :source-paths ["src"]
+                :source-paths ["src/cljs"]
                 :compiler {:output-to "resources/public/js/compiled/{{name}}.js"
                            :main {{name}}.boot
                            :optimizations :advanced
