@@ -16,11 +16,11 @@
   :plugins [[lein-figwheel "0.5.14"]
             [lein-cljsbuild "1.1.5" :exclusions [[org.clojure/clojure]]]]
 
-  :source-paths ["src"]
+  :source-paths ["src/cljs"{{#webpack?}} "src/cljsjs"{{/webpack?}}]
 
   :cljsbuild {:builds
               [{:id "dev"
-                :source-paths ["src/cljs"]
+                :source-paths ["src/cljs"{{#webpack?}} "src/cljsjs"{{/webpack?}}]
 
                 ;; the presence of a :figwheel configuration here
                 ;; will cause figwheel to inject the figwheel client
@@ -44,7 +44,7 @@
                ;; production. You can build this with:
                ;; lein cljsbuild once min
                {:id "min"
-                :source-paths ["src/cljs"]
+                :source-paths ["src/cljs"{{#webpack?}} "src/cljsjs"{{/webpack?}}]
                 :compiler {:output-to "resources/public/js/compiled/{{name}}.js"
                            :main {{name}}.boot
                            :optimizations :advanced

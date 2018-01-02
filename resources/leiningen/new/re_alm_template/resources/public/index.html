@@ -10,7 +10,8 @@
     <div id="app">
       <h2>Figwheel template</h2>
       <p>Checkout your developer console.</p>
-    </div>
+    </div>{{#webpack?}}
+    <script src="js/bundle.js"></script>{{/webpack?}}
     <script src="js/compiled/{{name}}.js" type="text/javascript"></script>
     <script>{{name}}.boot.init();</script>
   </body>

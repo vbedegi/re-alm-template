@@ -1,10 +1,18 @@
 # re-alm-template
 
-A Leiningen template for re-alm.
+A Leiningen template for [re-alm](https://github.com/vbedegi/re-alm)
 
 ## Usage
 
-FIXME
+```
+lein new re-alm <project-name>
+```
+
+To enable webpack, use `+webpack` flag:
+
+```
+lein new re-alm <project-name> +webpack
+```
 
 ## License
 
